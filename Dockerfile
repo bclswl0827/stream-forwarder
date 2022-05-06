@@ -9,6 +9,7 @@ COPY rootfs /
 RUN apt-get update \
     && apt-get install --no-install-recommends -y ffmpeg libfdk-aac-dev python3 tini supervisor \
     && chmod 755 /entrypoint.sh \
+    && mkdir -p /www \
     && rm -rf /var/lib/apt/lists/*
 
 EXPOSE 80
