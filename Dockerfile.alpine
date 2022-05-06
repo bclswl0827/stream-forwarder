@@ -8,7 +8,8 @@ COPY rootfs /
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
     && apk add --no-cache ffmpeg fdk-aac-dev python3 tini supervisor \
-    && chmod 755 /entrypoint.sh
+    && chmod 755 /entrypoint.sh \
+    && mkdir -p /www
 
 EXPOSE 80
 VOLUME ["/www"]
