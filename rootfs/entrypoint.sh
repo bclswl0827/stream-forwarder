@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sed -i "s/user=root/user=$(whoami)/g" /etc/supervisor/conf.d/supervisord.conf
+
 if [ -f "/usr/bin/tini" ]; then
     echo "Debian detected"
     /usr/bin/tini -s -- supervisord -n -c /etc/supervisor/supervisord.conf &
