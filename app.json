@@ -1,0 +1,7 @@
+{
+    "name": "Stream Forwarder",
+    "description": "透过 Docker 运行 FFmpeg 用以转发流媒体 ",
+    "website": "https://ibcl.us",
+    "repository": "https://github.com/bclswl0827/stream-forwarder",
+    "stack": "container"
+} 
