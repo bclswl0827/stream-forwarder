@@ -14,7 +14,7 @@ fi
 
 # 启动 HTTP 服务器
 if [ $PORT ]; then
-    /usr/bin/python3 -m http.server -d /www $PORT --bind ::
+    /usr/local/bin/httpd -p $PORT
 else
-    /usr/bin/python3 -m http.server -d /www 80 --bind ::
+    /usr/local/bin/httpd -p 80
 fi
